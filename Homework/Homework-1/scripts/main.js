@@ -18,10 +18,7 @@ let x13 = false;
 
 
 
-console.log(x1);
-console.log(x2);
-console.log(x3);
-console.log(x4);
+console.log(x1, x2, x3, x4);
 console.log(x5);
 console.log(x6);
 console.log(x7);
