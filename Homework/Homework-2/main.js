@@ -304,7 +304,7 @@ switch(dayNumber) {
         dayNumber = 'Четвер - четвертий день';
         break;
     case 5:
-        dayNumber = 'Пятниця - пятиний день';
+        dayNumber = 'П\'ятниця - пятиний день';
         break;
     case 6:
         dayNumber = 'Субота - шостий день';
