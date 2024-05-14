@@ -22,7 +22,7 @@ console.log('');
 console.log('-створити функцію, яка обчислює та повертає площу круга з радіусом r');
 console.log('I спосіб');
 function areaCircle1(r) {
-    let result = 3.14*r**2;
+    let result = 3.14*r*r;
     console.log(result);
     return result;
 }
@@ -75,7 +75,7 @@ console.log('');
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 document.write('<h3>Створити функцію, яка створює параграф з текстом. Текст задати через аргумент</h3>');
 function printText1(text){
-        document.write(`<p>${text} </p>`);
+        document.write(`<p>${text}</p>`);
 }
 printText1('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid corporis delectus ea eveniet facilis ipsum iusto magnam maiores modi numquam reprehenderit saepe sequi ut, velit, veritatis. Aperiam natus odio officiis.');
 
