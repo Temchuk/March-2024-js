@@ -115,9 +115,11 @@ printText3('Новий текст', 3);
 document.write('<h3>Створити функцію, яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список</h3>');
 let elements = [5, 8, 'Ok', 'No', true, false];
 function arrPrintElements(arr){
+    document.write('<ul>');
     for ( let i=0; i<arr.length; i++) {
-        document.write(`<ul>${arr[i]}</ul>`);
+        document.write(`<li>${arr[i]}</li>`);
     }
+    document.write('</ul>');
 }
 arrPrintElements(elements);
 
@@ -181,6 +183,20 @@ console.log('');
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 console.log('Створити функцію swap(arr,index1,index2). Функція міняє місцями значення у відповідних індексах');
 let numbers = [10, 5, 8, 3, 12];
+console.log(numbers)
+function swapFn1(arr,index1,index2 ){
+    let newIndex = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = newIndex;
+    return arr;
+}
+
+console.log(swapFn1(numbers, 0, 1));
+console.log('');
+
+
+console.log('-Вивід масиву з-заду на перід');
+// let numbers = [10, 5, 8, 3, 12];
 console.log(numbers);
 function swapFn(arr) {
     let newArray = [];
@@ -196,6 +212,7 @@ console.log('');
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 console.log('Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)');
+console.log('I спосіб');
 function exchangeFn(USD,EUR) {
     let currency = prompt('Введіть валюту: USD чи EUR');
     let value = +prompt('Введіть суму:');
