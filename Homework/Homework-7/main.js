@@ -354,3 +354,22 @@ console.log("Відмінники:", goodStudents);
 
 let names = classmates.customMap(classmate => classmate.name);
 console.log("Імена одногрупників:", names);
+
+
+
+
+console.log('');
+console.log('II спосіб');
+let studentsMap = new Map();
+
+let studentIvan = {id: 'studentIvan'};
+let studentOlena = {id: 'studentOlena'};
+let studentMarko = {id: 'studentMarko'};
+let studentAlisa = {id: 'studentAlisa'};
+
+studentsMap.set(studentIvan, {name: 'Іван', surname: 'Петренко', faculty: 'Медицина'});
+studentsMap.set(studentOlena, {name: 'Олена', surname: 'Коваленко', faculty: 'Медицина'});
+studentsMap.set(studentMarko, {name: 'Марко', surname: 'Ковальчук', faculty: 'Медицина'});
+studentsMap.set(studentAlisa, {name: 'Аліса', surname: 'Павленко', faculty: 'Підготовка медсестер'});
+
+console.log(studentsMap.get(studentIvan));
