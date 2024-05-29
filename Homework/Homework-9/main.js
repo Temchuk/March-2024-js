@@ -26,7 +26,7 @@ document.body.appendChild(clonedBlock);
 
 
 
-
+//
 // - Є масив:
 //     ['Main','Products','About us','Contacts']
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
