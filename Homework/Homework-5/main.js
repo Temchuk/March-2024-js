@@ -24,9 +24,20 @@ console.log(areaCylinder(5, 6));
 console.log('');
 
 
+
+
+
+
+
+
+
+
+
+// дороблювала****************
+
+
 // - створити функцію яка приймає масив та виводить кожен його елемент
 console.log('- створити функцію, яка приймає масив та виводить кожен його елемент')
-
 
 const arrWeather = [
     { day: "Понеділок", morning: 18, afternoon: 25, evening: 20 },
@@ -37,22 +48,67 @@ const arrWeather = [
     { day: "Субота", morning: 18, afternoon: 23, evening: 18 },
     { day: "Неділя", morning: 17, afternoon: 22, evening: 17 }
 ];
+
+const printArrayElements = arr => {
+    arr.forEach(element => console.log(element));
+};
+
+printArrayElements(arrWeather);
 console.log('');
 
 
 
 
-
-
-
-
-
-
-
-
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
+document.write('<h3>- створити функцію яка створює параграф з текстом. Текст задати через аргумент</h3>');
+const createParagraph = text => {
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    document.body.appendChild(paragraph);
+};
+
+createParagraph('Це текст.');
+
+
+
+
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+document.write('<h3>- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий</h3>');
+const createList = text => {
+    const ul = document.createElement('ul');
+    for (let i = 0; i < 3; i++) {
+        const li = document.createElement('li');
+        li.textContent = text;
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+};
+
+createList('Текст для усіх елементів');
+
+
+
+
+
+// - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент
+// всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+document.write('<h3>- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент  всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)</h3>');
+const createList2 = (text, count) => {
+    const ul = document.createElement('ul');
+    for (let i = 0; i < count; i++) {
+        const li = document.createElement('li');
+        li.textContent = text;
+        ul.appendChild(li);
+    }
+    document.body.appendChild(ul);
+};
+
+createList2('Текст', 3);
+
+
+
+
+
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),та будує для них список
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 // - створити функцію яка повертає найменьше число з масиву
