@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework-10.2</title>
+</head>
+<body>
+
+
+
+<!--// зробити масив на 100 об'єктів та дві кнопки prev next-->
+<!--// при завантажені сторінки з'являються перші 10 об'єктів.-->
+<!--// При натисканні next виводяться настпні 10 об'єктів-->
+<!--// При натисканні prev виводяться попередні 10 об'єктів-->
+
+
+
+<div id="content"></div>
+<button id="prev">Prev</button>
+<button id="next">Next</button>
+
+
+
+
+<script>
+    const data = Array.from({ length: 100 }, (_, i) => ({ value: i + 1 }));
+
+    const contentElement = document.getElementById('content');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentPage = 0;
+    const pageSize = 10;
+
+    function displayData() {
+        const startIndex = currentPage * pageSize;
+        const endIndex = startIndex + pageSize;
+        const currentPageData = data.slice(startIndex, endIndex);
+
+        contentElement.innerHTML = '';
+
+        currentPageData.forEach(item => {
+            const div = document.createElement('div');
+            div.textContent = item.value;
+            contentElement.appendChild(div);
+        });
+    }
+
+    displayData();
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage < Math.ceil(data.length / pageSize) - 1) {
+            currentPage++;
+            displayData();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            displayData();
+        }
+    });
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
