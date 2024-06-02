@@ -3,6 +3,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(users => {
         const userListDiv = document.getElementById('userList');
         users.forEach(user => {
+
             const userDiv = document.createElement('div');
             userDiv.className = 'user-block';
             userDiv.innerHTML = `<p><strong>ID:</strong> ${user.id}</p>

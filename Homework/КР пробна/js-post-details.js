@@ -6,6 +6,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(post => {
         const postDetailsDiv = document.getElementById('postDetails');
         postDetailsDiv.innerHTML = `
+   
                     <p><b>ID:</b> ${post.id}</p>
                     <p><b>Title:</b> ${post.title}</p>
                     <p><b>Body:</b> ${post.body}</p>

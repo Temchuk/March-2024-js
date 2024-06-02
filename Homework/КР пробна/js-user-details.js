@@ -8,6 +8,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         userDetailsDiv.innerHTML = `
                     <p><b>ID:</b> ${user.id}</p>
                     <p><b>Name:</b> ${user.name}</p>
+    
                     <p><b>Username:</b> ${user.username}</p>
                     <p><b>Email:</b> ${user.email}</p>
                     <p><b>Phone:</b> ${user.phone}</p>
