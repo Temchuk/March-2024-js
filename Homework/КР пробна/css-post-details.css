@@ -1,0 +1,22 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+}
+.post-details {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #b9f5b3;
+    border: 3px solid #7eb678;
+}
+.comments-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.comment-item {
+    background-color: #d8ecd6;
+    border: 2px solid #849a83;
+    padding: 10px;
+    margin: 5px auto;
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+}

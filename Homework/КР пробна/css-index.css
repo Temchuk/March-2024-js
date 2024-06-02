@@ -1,0 +1,29 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+}
+#userList {
+    display: flex;
+    flex-wrap: wrap;  /*Елементи будуть йти в новий рядок, якщо вони не вміщаються в один*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;       /*в рядок */
+}
+.user-block {
+    background-color: rgb(121, 208, 208);
+    border: 3px solid #3b7a78;
+    padding: 20px;
+    margin: 10px 30px;
+    width: 45%;                 /*можна замінити це на:   width: calc(50% - 40px);*/
+    box-sizing: border-box;
+}
+.user-block p {
+    margin: 5px 0;
+}
+.user-block button {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/*width: calc(50% - 40px);    ширина елемента має бути 50% від ширини батьківського елемента і від цієї
+ширини (50% від батьківського елемента) потрібно відняти 40 px.*/

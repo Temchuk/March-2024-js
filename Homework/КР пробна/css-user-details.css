@@ -1,0 +1,41 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+}
+.user-details {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(227, 193, 238, 0.44);
+    border: 3px solid #d267e8;
+}
+.posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post-item {
+    background-color: #b48ac0;
+    border: 3px solid #da54ea;
+    padding: 10px;
+    margin: 20px auto;
+    width: calc(20% - 20px);
+    box-sizing: border-box;
+    position: relative;
+}
+.post-item button {
+    background-color: #e6d1ef;
+    border: 1px solid #080823;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+.load-posts-button {
+    background-color: #e582f5;
+    border: 3px solid #472c4b;
+    display: block;
+    width: 90%;
+    margin: auto;
+}
