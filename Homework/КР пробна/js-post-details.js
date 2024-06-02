@@ -6,9 +6,9 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(post => {
         const postDetailsDiv = document.getElementById('postDetails');
         postDetailsDiv.innerHTML = `
-                    <p>ID: ${post.id}</p>
-                    <p>Title: ${post.title}</p>
-                    <p>Body: ${post.body}</p>
+                    <p><b>ID:</b> ${post.id}</p>
+                    <p><b>Title:</b> ${post.title}</p>
+                    <p><b>Body:</b> ${post.body}</p>
                 `;
 
         return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
@@ -20,7 +20,8 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
             const commentItemDiv = document.createElement('div');
             commentItemDiv.className = 'comment-item';
             commentItemDiv.innerHTML = `
-                        <p><strong>${comment.name}</strong> (${comment.email})</p>
+                        <p><strong>${comment.name}</strong></p>
+                        <p>${comment.email}</p>
                         <p>${comment.body}</p>
                     `;
             commentsListDiv.appendChild(commentItemDiv);

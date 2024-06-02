@@ -1,20 +1,31 @@
 body {
-    font-family: "Times New Roman", sans-serif;
+    font-family: "Noto Sans", sans-serif;
 }
+.noto-sans{
+                font-family: "Noto Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                font-variation-settings:
+                        "wdth" 100;
+            }
 .post-details {
     width: 90%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #b9f5b3;
     border: 3px solid #7eb678;
+    box-shadow: rgba(80, 133, 75, 0.62) 0.5em 0.5em 0.3em;
+    border-radius: 15px 50px;
+    background: linear-gradient(90deg, #b9f5b3, #fdd4db);
 }
 .comments-list {
     display: flex;
     flex-wrap: wrap;
 }
 .comment-item {
-    background-color: #d8ecd6;
-    border: 2px solid #849a83;
+    background: linear-gradient(#b9f5b3, 80%, #fdd4db);
+    border: 2px solid rgba(132, 154, 131, 0.56);
+    border-radius: 2em;
     padding: 10px;
     margin: 5px auto;
     width: calc(25% - 20px);
